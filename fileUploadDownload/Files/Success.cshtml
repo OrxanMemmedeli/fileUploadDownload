@@ -1,0 +1,40 @@
+﻿@model TDVHilalQeydiyyat.Models.Baza
+
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Success</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="//fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="~/web/css/style.css" rel='stylesheet' type='text/css' media="all" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="content-w3ls">
+        <div class="alert alert-info">@TempData["Message"]</div>
+
+        <div class="form-w3ls">
+            <marquee>
+                <h1 class="header-w3ls" style="color:forestgreen"><b>QEYDİYYAT UĞURLA TAMAMLANDI.</b></h1>
+            </marquee>
+            <img src="~/Content/images/unnamed.png" style="width:150px; margin-left:45%; margin-top:30px; margin-bottom:30px" />
+            <p style="color:white; font-size:16px">Qeydiyyatdan zamanı qeyd edilmiş məlumatlar kursun mərkəzi məlumat bazasına göndərilmişdir. Kursların haqqında digər zəruri məlumatlar təqdim etdiyiniz Email ünvanı <span style="color:red">(@Model.Email)</span> və WhatsApp <span style="color:red">(@Model.Mobil1)</span> nömrəsinə qısa mətn mesajı formatında  göndəriləcəkdir.<br /> (Qeyd edilmiş əlaqə vasitələrində hər hansı yanlışlıq olarsa Kursun <a href="https://www.facebook.com/tdvhilalkurs">Facebook</a> ünvanı və ya mobil nömrələri ilə (070 353 58 55 / 055 472 01 87) əlaqə saxlamanız tələb olunur)</p>
+        </div>
+    </div>
+
+    <p class="copyright">© 2020  <a href="https://www.facebook.com/tdvhilalkurs">TDV-Hilal kursu</a>| Create by Khan</p>
+
+</body>
+</html>
+

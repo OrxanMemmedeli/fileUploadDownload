@@ -1,0 +1,51 @@
+﻿@model TDVHilalQeydiyyat.Models.MultiModel
+
+@{
+    Layout = null;
+}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Qeydiyyat formu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- font files -->
+    <link href="//fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- /font files -->
+    <!-- css files -->
+    <link href="~/web/css/style.css" rel='stylesheet' type='text/css' media="all" />
+    <!-- /css files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1 class="header-w3ls">TDV-HİLAL Kursu <br> QEYDİYYAT PƏNCƏRƏSİ</h1>
+    <div class="content-w3ls" style="background-color:azure">
+        <div class="form-w3ls">
+            <div class="content-wthree1">
+
+                @foreach (var item in Model.qaydalar)
+                {
+                    <p style="color:black; text-align:left; width:auto">@Html.Raw(item.Qaydalar1)</p>
+                }
+
+            </div>
+
+        </div>
+        <br />
+        <a href="/Home/Index" class="btn" style="color:orangered">QEYDİYYATDAN KEÇ</a>
+
+    </div>
+
+    <p class="copyright">
+        © 2020  <a href="https://www.facebook.com/tdvhilalkurs">TDV-Hilal kursu</a>| Create by Khan
+    </p>
+
+</body>
+</html>

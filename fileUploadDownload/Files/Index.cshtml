@@ -1,0 +1,206 @@
+﻿@model TDVHilalQeydiyyat.Models.MultiModel
+@{
+    Layout = null;
+}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Qeydiyyat formu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- font files -->
+    <link href="//fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- /font files -->
+    <!-- css files -->
+    <link href="~/web/css/style.css" rel='stylesheet' type='text/css' media="all" />
+    <!-- /css files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1 class="header-w3ls">TDV-HİLAL Kursu <br> QEYDİYYAT PƏNCƏRƏSİ</h1>
+    <div class="content-w3ls">
+        <div class="form-w3ls">
+            <form action="/Home/Index" method="post" class="form-disable">
+                <div class="content-wthree1">
+                    <div class="grid-agileits1">
+                        <div class="form-control">
+                            <label class="header">Ad: <span>*</span> </label>
+                            <input type="text" id="name" name="Ad" placeholder="Şagirdin adı" title="Şagirdin adını daxil edin" required="" oninvalid="this.setCustomValidity('Şagirdin adını daxil edin')" oninput="setCustomValidity('')">
+                        </div>
+
+                        <div class="form-control">
+                            <label class="header">Soyad: <span>*</span> </label>
+                            <input type="text" id="name" name="Soyad" placeholder="Şagirdin soyadı" title="Şagirdin soyadını daxil edin" required="" oninvalid="this.setCustomValidity('Şagirdin soyadını daxil edin')" oninput="setCustomValidity('')">
+                        </div>
+
+                        <div class="form-control">
+                            <label class="header">Ata Adı: <span>*</span> </label>
+                            <input type="text" id="name" name="AtaAdi" placeholder="Şagirdin atasının adı" title="Şagirdin atasının adını daxil edin" required="" oninvalid="this.setCustomValidity('Şagirdin atasının adını daxil edin')" oninput="setCustomValidity('')">
+                        </div>
+
+                        <div class="form-control">
+                            <label class="header">Sinif: <span>*</span> </label>
+                            <select id="classes" required="" name="Sinif" oninvalid="this.setCustomValidity('Şagirdin sinifini seçin')" oninput="setCustomValidity('')">
+                                <option>--seç--</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+
+                        <div class="form-control">
+                            <label class="header">Dərs günləri: <span>*</span> </label>
+                            <select id="days" required="" name="DersGunu" oninvalid="this.setCustomValidity('Kurs günlərini seçin')" oninput="setCustomValidity('')">
+                                <option>--seç--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid-agileits2">
+                        <div class="form-control">
+                            <label class="header">Email Ünvanı: <span>*</span> </label>
+                            <input type="email" id="email" name="Email" placeholder="Mail@example.com" title="Email Ünvanı daxil edin" required="" oninvalid="this.setCustomValidity('Email Ünvanı daxil edin')" oninput="setCustomValidity('')">
+                        </div>
+
+                        <div class="form-control">
+                            <label class="header">WhatsApp: <span>*</span> </label>
+                            <input type="tel" id="name" name="Mobil1" placeholder="nümunə: 701112233" pattern="[0-9]{9}" title="Mobil nömrə daxil edin" required="" oninvalid="this.setCustomValidity('Mobil nömrə daxil edən zaman 501112233 düzülüşünə riayət edin')" oninput="setCustomValidity('')">
+                        </div>
+
+                        <div class="form-control">
+                            <label class="header">Mobil nömrə: <span>*</span> </label>
+                            <input type="tel" id="name" name="Mobil2" placeholder="nümunə: 551112233" pattern="[0-9]{9}" title="Mobil nömrə daxil edin" minlength="9" required="" oninvalid="this.setCustomValidity('Mobil nömrə daxil edin')" oninput="setCustomValidity('')">
+                        </div>
+                        <div class="form-control">
+                            <label class="header">Yaşayış ərazisi: </label>
+                            <select name="Unvan">
+                                <option value="Abşeron">Abşeron</option>
+                                <option value="Binəqədi">Binəqədi</option>
+                                <option value="Nərimanov">Nərimanov</option>
+                                <option value="Nəsimi">Nəsimi</option>
+                                <option value="Nizami">Nizami</option>
+                                <option value="Pirallahı">Pirallahı</option>
+                                <option value="Qaradağ">Qaradağ</option>
+                                <option value="Sabunçu">Sabunçu</option>
+                                <option value="Səbail">Səbail</option>
+                                <option value="Suraxanı">Suraxanı</option>
+                                <option value="Xətai">Xətai</option>
+                                <option value="Xəzər">Xəzər</option>
+                                <option value="Yasamal">Yasamal</option>
+                            </select>
+                        </div>
+                        <div class="form-control">
+                            <label class="header" id="qrup_label">İxtisas Qrupu:</label>
+                            <select id="qrup_combobox" name="Qrup">
+                                <option value="1">I qrup</option>
+                                <option value="2">II qrup</option>
+                                <option value="3">III qrup</option>
+                                <option value="4">IV qrup</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="content-wthree4" style="margin-top: 60px;">
+                    <div class="form-control">
+                        <input id="submit" type="submit" class="register" value="TƏSDİQLƏ" data-submit-value="GÖZLƏYİN...">
+                        <input id="reset" type="reset" class="reset" value="TƏMİZLƏ">
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <p class="copyright">
+        © 2020  <a href="https://www.facebook.com/tdvhilalkurs">TDV-Hilal kursu</a>| Create by Khan
+    </p>
+
+
+    <script type="text/javascript">
+
+
+        $("#classes").on('change', function () {// in this line identify if there is any changes to first select box
+            var thevalue = $(this).val(); // if there is any changes to first selection box, then at that time get the
+            $("#days").text("");
+            //display values according to the first value
+            if (thevalue == 4) {
+                var days = ["Həftə içi", "Həftə sonu"];
+                for (var i = 0; i < days.length; i++) {
+                    var createoption = $('<option value="' + days[i] + '">' + days[i] + '</option>');
+                    $("#days").append(createoption);
+                }
+            }
+            else if (thevalue == 5) {
+                var days = ["Həftə içi", "Həftə sonu"];
+                for (var i = 0; i < days.length; i++) {
+                    var createoption = $('<option value="' + days[i] + '">' + days[i] + '</option>');
+                    $("#days").append(createoption);
+                }
+            }
+            else if (thevalue == 8) {
+                var days = ["Həftə içi"];
+                for (var i = 0; i < days.length; i++) {
+                    var createoption = $('<option value="' + days[i] + '">' + days[i] + '</option>');
+                    $("#days").append(createoption);
+                }
+            }
+            else if (thevalue == 9) {
+                var days = ["Həftə içi"];
+                for (var i = 0; i < days.length; i++) {
+                    var createoption = $('<option value="' + days[i] + '">' + days[i] + '</option>');
+                    $("#days").append(createoption);
+                }
+            }
+            else {
+                //like above you can add relevent values.
+            }
+        });
+
+
+    </script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var $classes = $("#classes"),
+                $qrup_label = $("#qrup_label"),
+                $qrup_combobox = $("#qrup_combobox");
+
+            $qrup_label.hide();
+            $qrup_combobox.hide();
+
+            $classes.on('change', function () {
+                if ($(this).val() == 8) {
+                    $qrup_label.show();
+                    $qrup_combobox.show();
+                }
+                else {
+                    $qrup_label.hide();
+                    $qrup_combobox.hide();
+                }
+            });
+
+        })
+    </script>
+
+    <script>
+        $('.form-disable').on('submit', function () {
+
+            var self = $(this),
+                button = self.find('input[type=submit],button'),
+                submitValue = button.data('submit-value');
+
+            button.attr('disabled', 'disabled').val((submitValue) ? submitValue: 'GÖZLƏYİN...');
+        });
+    </script>
+
+</body>
+</html>
